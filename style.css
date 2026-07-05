@@ -1,0 +1,72 @@
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --accent-color: #00f;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  overflow: hidden;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  opacity: 1;
+}
+
+#visualizer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#playlist li {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+#playlist li span {
+  flex: 1;
+  text-align: left;
+}

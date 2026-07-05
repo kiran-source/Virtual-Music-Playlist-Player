@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Playlist Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="Golden Music Note  animated motion Background loops  HD Free Downlode - SUNARI VFX (720p, h264).mp4" type="video/mp4">
+  </video>
+
+  <canvas id="visualizer"></canvas>
+
+  <div class="container">
+    <h1>🎵 Playlist Music Player</h1>
+    <p id="now-playing">Now Playing: </p>
+    <audio id="audio-player" controls></audio>
+
+    <div class="controls">
+      <button onclick="previousSong()">⏮ Previous</button>
+      <button onclick="playSong()">▶️ Play</button>
+      <button onclick="nextSong()">⏭ Next</button>
+      <button onclick="shuffleSong()">🔀 Shuffle</button>
+    </div>
+
+    <h2>Add Songs</h2>
+    <input type="file" id="song-files" multiple>
+    <button onclick="uploadSongs()">➕ Upload Songs</button>
+
+    <h2>🎶 Playlist</h2>
+    <ul id="playlist"></ul>
+
+    <div class="playlist-options">
+      <select id="playlist-select" onchange="switchPlaylist()"></select>
+      <button onclick="createPlaylist()">+ New Playlist</button>
+    </div>
+  </div>
+
+  <button id="toggle-theme">🌈 Toggle Theme</button>
+  <script src="script.js"></script>
+</body>
+</html>
